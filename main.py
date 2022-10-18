@@ -3,7 +3,7 @@ import pandas as pd
 import altair as alt
 @st.cache
 def get_un_data():
-    df=pd.read_csv("D:\\data\\agri.csv")
+    df=pd.read_csv("agri.csv")
     return df.set_index("Region")
 df=get_un_data()
 countries=st.multiselect("Choose countries",list(df.index),default=["United States of America","India"])
